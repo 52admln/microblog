@@ -1,0 +1,16 @@
+<% if(!user) { %>
+<div class="jumbotron">
+    <div class="container">
+        <h1>欢迎来到 Microblog</h1>
+        <p>Microblog 是一个基于 Node.js 的微博系统。</p>
+        <p>
+            <a class="btn btn-primary btn-lg" href="/login">登录</a>
+            <a class="btn btn-default btn-lg" href="/reg">立即注册</a></p>
+    </div>
+</div>
+<% } else { %>
+<div class="container">
+    <%- include say.ejs %>
+    <% } %>
+    <%- include posts.ejs %>
+</div>
